@@ -1,0 +1,47 @@
+.TH "shortcut" "1" "August 2015" "0.0.0" ""
+
+.SH "NAME"
+\fBshortcut\fR - Add autocorrect text shortcuts
+
+.SH "SYNOPSIS"
+.P
+\fBshortcut\fR \[lB]\fBoptions\fR\[rB] <\fIreplace\fR> <\fIwith\fR>
+
+.SH "DESCRIPTION"
+.P
+\fBshortcut\fR(1) adds autocorrect text shortcuts to OS X, as in, when typing
+\(ga\(Doa\(ga, its expanded to \(ga\(Dob\(ga.
+
+.SH "EXAMPLE"
+.RS 2
+.nf
+\(Do shortcut "omw" "on my way"
+.fi
+.RE
+
+.SH "OPTIONS"
+
+.SS "-v, --version"
+.P
+output version
+
+.SS "-h, --help"
+.P
+output usage information
+
+.SH "NOTE"
+.P
+Uses undocumented features, meaning that this might break on new releases
+of OS X (but your shortcuts will not).
+
+.SH "BUGS"
+.P
+<\fIhttps://github.com/wooorm/osx-shortcut/issues\fR>
+
+.SH "AUTHOR"
+.P
+Written by Titus Wormer <\fItituswormer@gmail.com\fR>
+
+.SH "LICENSE"
+.P
+MIT \(co Titus Wormer

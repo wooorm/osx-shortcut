@@ -1,0 +1,32 @@
+{
+  "name": "osx-shortcut",
+  "version": "0.0.0",
+  "description": "Add autocorrect text shortcuts to OS X",
+  "license": "MIT",
+  "keywords": [
+    "cli",
+    "bin",
+    "osx",
+    "shortcut",
+    "text",
+    "expand",
+    "shortcut",
+    "replace"
+  ],
+  "repository": "wooorm/osx-shortcut",
+  "author": {
+    "name": "Titus Wormer",
+    "email": "tituswormer@gmail.com",
+    "url": "http://wooorm.com"
+  },
+  "files": [
+    "osx-shortcut.sh",
+    "man"
+  ],
+  "bin": {
+    "shortcut": "osx-shortcut.sh"
+  },
+  "directories": {
+    "man": "./man"
+  }
+}
