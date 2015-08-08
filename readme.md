@@ -1,4 +1,4 @@
-# osx-shortcut
+# osx-shortcut ![`bin/sh`](https://img.shields.io/badge/bin-sh-89e051.svg)
 
 > Add autocorrect text shortcuts, as in, when I type `$a`, its
 > expanded to `$b`.
