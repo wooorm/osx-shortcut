@@ -27,7 +27,7 @@ EOF
 #
 
 version () {
-  echo "0.0.0"
+  echo "1.0.0"
 }
 
 #
