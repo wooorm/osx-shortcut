@@ -45,7 +45,17 @@ esac
 # Find SQLite database.
 #
 
-database=$(find ~/Library/Dictionaries/CoreDataUbiquitySupport/ -name '*.db' | head -1)
+database=$(find ~/Library/Dictionaries/CoreDataUbiquitySupport/$USER~*/UserDictionary/*/store/UserDictionary.db | head -1)
+
+if [[ "$database" == "" ]]; then
+  echo
+  echo "Could not find database."
+  echo "osx-shortcut requires Mavericks or higher."
+  echo "If you are on Mavericks or higher, please raise an issue:"
+  echo
+  echo "  https://github.com/wooorm/osx-shortcut/issues/new"
+  exit 1
+fi
 
 #
 # Find primary key.
