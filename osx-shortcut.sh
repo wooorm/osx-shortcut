@@ -51,7 +51,7 @@ esac
 
 database=$(find ~/Library/Dictionaries/CoreDataUbiquitySupport/$USER~*/UserDictionary/*/store/UserDictionary.db | head -1)
 
-if [[ "$database" == "" ]]; then
+if [ "$database" = "" ]; then
   echo
   echo "Could not find database."
   echo "osx-shortcut requires Mavericks or higher."
@@ -65,7 +65,7 @@ fi
 # Find primary key.
 #
 
-typeset -i primary=$(sqlite3 "$database" 'SELECT Z_MAX from "Z_PRIMARYKEY"')
+primary=$(sqlite3 "$database" 'SELECT Z_MAX from "Z_PRIMARYKEY"')
 
 #
 # Get current time.
@@ -80,7 +80,7 @@ now=$(date +%s)
 # @param $2 - With.
 #
 insert() {
-  let primary+=1
+  primary=$((primary+1))
   sqlite3 "$database" "INSERT INTO \"ZUSERDICTIONARYENTRY\" VALUES($primary,1,1,0,0,0,0,$now,NULL,NULL,NULL,NULL,NULL,'$2','$1',NULL)"
 }
 
@@ -111,4 +111,4 @@ sqlite3 "$database" "UPDATE 'Z_PRIMARYKEY' SET Z_MAX = $primary"
 # Restart AppleSpell.
 #
 
-killall -e AppleSpell &> /dev/null
+killall -e AppleSpell > /dev/null 2>&1
