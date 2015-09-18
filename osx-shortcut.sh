@@ -7,16 +7,21 @@
 usage () {
 cat << EOF
 
-  Usage: shortcut [options] <replace> <with>
+  Usage:
+    shortcut <replace> <with>
+    shortcut (--help | --version)
 
   Options:
 
     -h, --help     output usage information
     -v, --version  output version
 
+  stdin(4), in the CSV format, can be provided instead of arguments.
+
   Examples:
 
     $ shortcut "omw" "on my way"
+    $ shortcut <<< "omw,on my way"
 
   See also: man 1 shortcut
 EOF
@@ -35,10 +40,9 @@ version () {
 #
 
 case $1 in
-  "")           usage; exit 1 ;;
   -h|--help)    usage; exit ;;
   -v|--version) version; exit ;;
-  *)            readonly replace=$1 ; readonly with=$2 ;;
+  *)            replace=$1 ; with=$2 ;;
 esac
 
 #
@@ -84,7 +88,18 @@ insert() {
 # Insert.
 #
 
-insert "$replace" "$with"
+if [ "$replace" != "" ]; then
+  if [ "$with" = "" ]; then
+    usage
+    exit 1
+  fi
+
+  insert "$replace" "$with"
+else
+  while IFS=',' read -r replace with; do
+    insert "$replace" "$with"
+  done < "/dev/stdin"
+fi
 
 #
 # Update primary key in `Z_PRIMARYKEY` table.

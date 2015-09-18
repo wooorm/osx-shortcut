@@ -26,9 +26,12 @@ Options:
   -h, --help     output usage information
   -v, --version  output version
 
+You can also pass CSV on stdin(4).
+
 Examples:
 
   $ shortcut "omw" "on my way"
+  $ shortcut <<< "omw,on my way"
 
 See also: man 1 shortcut
 ```
