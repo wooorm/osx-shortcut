@@ -14,11 +14,7 @@
     "replace"
   ],
   "repository": "wooorm/osx-shortcut",
-  "author": {
-    "name": "Titus Wormer",
-    "email": "tituswormer@gmail.com",
-    "url": "http://wooorm.com"
-  },
+  "author": "Titus Wormer <tituswormer@gmail.com> (http://wooorm.com)",
   "files": [
     "osx-shortcut.sh",
     "man"
