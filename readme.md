@@ -1,4 +1,4 @@
-# osx-shortcut ![`bin/sh`](https://img.shields.io/badge/bin-sh-89e051.svg)
+# osx-shortcut ![`bin/sh`][bash]
 
 > Add autocorrect text shortcuts, as in, when I type `$a`, its
 > expanded to `$b`.
@@ -10,7 +10,7 @@ of OS X (but your shortcuts will not).
 
 ## Install
 
-[npm](https://docs.npmjs.com/cli/install):
+[npm][]
 
 ```bash
 npm install osx-shortcut --global
@@ -38,8 +38,14 @@ See also: man 1 shortcut
 
 Go to `System Preferences` > `Keyboard` > `Text` to see your shortcuts.
 
-![](./screenshot.png)
+![][screenshot]
 
 ## License
 
-[MIT](LICENSE) © [Titus Wormer](http://wooorm.com)
+[MIT][] © [Titus Wormer][author]
+
+[bash]: https://img.shields.io/badge/bin-sh-89e051.svg
+[npm]: https://docs.npmjs.com/cli/install
+[mit]: LICENSE
+[author]: http://wooorm.com
+[screenshot]: ./screenshot.png
