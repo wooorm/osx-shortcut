@@ -46,6 +46,6 @@ Go to `System Preferences` > `Keyboard` > `Text` to see your shortcuts.
 
 [bash]: https://img.shields.io/badge/bin-sh-89e051.svg
 [npm]: https://docs.npmjs.com/cli/install
-[mit]: LICENSE
+[mit]: license
 [author]: http://wooorm.com
 [screenshot]: ./screenshot.png
